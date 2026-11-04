@@ -1,10 +1,10 @@
-function Prodcut() {
+function Product(props) {
   return (
     <div>
-      <img src="https://placehold.co/300x200" alt="Wireless Headphones" />
-      <h2>Wireless Headphones</h2>
-      <p>$59.99</p>
-      <p>High-quality wireless headphones with clear sound.</p>
+      <img src={props.image} alt={props.name} />
+      <h2>{props.name}</h2>
+      <p>${props.price}</p>
+      <p>{props.description}</p>
     </div>
   );
 }
@@ -14,9 +14,26 @@ function App() {
     <div>
       <h1>Our Products</h1>
 
-      <Prodcut />
-      <Prodcut />
-      <Prodcut />
+      <Product
+        image="https://placehold.co/300x200"
+        name="Wireless Headphones"
+        price={59.99}
+        description="High-quality wireless headphones with clear sound."
+      />
+
+      <Product
+        image="https://placehold.co/300x200"
+        name="Smart Watch"
+        price={89.99}
+        description="A stylish smartwatch to track your daily activities."
+      />
+
+      <Product
+        image="https://placehold.co/300x200"
+        name="Bluetooth Speaker"
+        price={39.99}
+        description="Portable speaker with powerful sound and deep bass."
+      />
     </div>
   );
 }
