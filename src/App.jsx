@@ -1,3 +1,7 @@
+import HeadphoneImage from "./images/headphone.png";
+import SpeakerImage from "./images/speaker.png";
+import WatchImage from "./images/watch.png";
+
 function Product({ image, name, price, description }) {
   return (
     <div>
@@ -15,21 +19,21 @@ function App() {
       <h1>Our Products</h1>
 
       <Product
-        image="https://placehold.co/300x200"
+        image={HeadphoneImage}
         name="Wireless Headphones"
         price={59.99}
         description="High-quality wireless headphones with clear sound."
       />
 
       <Product
-        image="https://placehold.co/300x200"
+        image={WatchImage}
         name="Smart Watch"
         price={89.99}
         description="A stylish smartwatch to track your daily activities."
       />
 
       <Product
-        image="https://placehold.co/300x200"
+        image={SpeakerImage}
         name="Bluetooth Speaker"
         price={39.99}
         description="Portable speaker with powerful sound and deep bass."
